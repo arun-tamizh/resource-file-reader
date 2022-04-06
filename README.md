@@ -23,5 +23,5 @@ Resource.msg('property.name', 'bundleName', defaultValue);
 
 This method reads the value similar to msg method and replaces the placeholders ({0}, {1}...) with the arguments passed.
 ```
-Resource.msg('property.name', 'bundleName', defaultValue, ...args);
+Resource.msgf('property.name', 'bundleName', defaultValue, ...args);
 ```
