@@ -1,16 +1,17 @@
 {
-  "name": "resource_file_reader",
+  "name": "resource-file-reader",
   "version": "1.0.0",
-  "description": "",
+  "description": ".properties file reader for node applications",
   "main": "index.js",
   "scripts": {
     "start": "node src/index"
   },
   "keywords": [
-    ".properties file reader",
-    "resource file reader"
+    ".properties",
+    "resource"
   ],
   "author": "arun_tamizh",
+  "license": "MIT",
   "dependencies": {
     "glob": "^7.2.0",
     "properties-reader": "^2.2.0"
