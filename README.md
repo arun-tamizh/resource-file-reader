@@ -1,4 +1,6 @@
 # Resource File Reader
-Text string reader from .properties files similar to b2c commercecloud dw Resource class.
+A .properties files reader for NodeJS applications similar to b2c commercecloud dw Resource class.
 
-This repo uses 'properties-reader' package as dependancy to read the .properties file. However this repo does not implements the file writer option.  
+This repo uses 'properties-reader' package (https://www.npmjs.com/package/properties-reader) as dependancy to read the '.properties' files. However this repo does not implements the file writer option.
+
+#Installation
