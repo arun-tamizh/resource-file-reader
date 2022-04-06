@@ -9,8 +9,8 @@
   "keywords": [
     ".properties",
     "resource",
-    'dw_resource',
-    'sfcc_properties'
+    "dw resource",
+    "sfcc .properties"
   ],
   "author": "arun_tamizh",
   "license": "MIT",
