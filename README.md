@@ -19,7 +19,7 @@ const Resource = require('resource-file-reader');
 Resource.msg('property.name', 'bundleName', defaultValue);
 ```
 
-# msgf
+## msgf
 
 This method reads the value similar to msg method and replaces the placeholders ({0}, {1}...) with the arguments passed.
 ```
