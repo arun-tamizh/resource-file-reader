@@ -12,7 +12,7 @@ const propertiesReader = require('properties-reader');
     const _cwd = process.cwd();
 
     //path to all resource bundle folders
-    const paths = glob.sync(path.resolve(_cwd, '**', 'resources'));
+    const paths = glob.sync(path.resolve(_cwd, '**'));
 
     //constructs the bundle
     const getBundle = function(filename) {
