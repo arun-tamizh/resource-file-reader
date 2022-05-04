@@ -5,7 +5,7 @@ const path = require('path');
 const process = require('process');
 const fs = require('fs');
 const glob = require('glob');
-const propertiesReader = require('properties-reader');
+const propFileReader = require('./lib/propReader');
 
 (function() {
     //current workspace
@@ -21,7 +21,7 @@ const propertiesReader = require('properties-reader');
         });
 
         if (filePaths.length) {
-            return propertiesReader(path.resolve(filePaths[0], filename + '.properties'));
+            return propFileReader(path.resolve(filePaths[0], filename + '.properties'));
         }
     }
 
@@ -41,8 +41,16 @@ const propertiesReader = require('properties-reader');
 
     //global exposed methods
     module.exports = {
+        cache: {},
         msg: function(name, bundleName, defaultValue) {
-            return getBundle(bundleName).get(name) || defaultValue;
+            let bundle = { get: function(name) {return ''}};
+            if (this.cache[bundleName]) {
+                bundle = this.cache[bundleName];
+            } else {
+                bundle = getBundle(bundleName);
+                this.cache[bundleName] = bundle;
+            }
+            return bundle.get(name) || defaultValue;
         },
         msgf: function(name, bundleName, defaultValue) {
             const argsArray = Array.prototype.slice.call(arguments, 3);
